@@ -530,6 +530,14 @@ video {
   top: 1.25rem;
 }
 
+.left-10 {
+  left: 2.5rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -616,6 +624,18 @@ video {
   .md\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:h-24 {
+    height: 6rem;
   }
 
   .md\:flex-row {
