@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body dir="rtl">
+    <nav
+      x-data="{open:false}"
+      :class="open ? 'h-24': 'h-screen' "
+      class="w-full px-10 py-5 bg-slate-800 h-24 text-white flex gap-10 items-center justify-between md:justify-start md:font-bold"
+    >
+      <img src="/images/hero.jpg" alt="logo" class="w-14 rounded-full top-5" />
+      <ul
+        x-show="open =true"
+        :class="open ? 'hidden' : ''"
+        class="flex flex-col md:flex-row items-center gap-10 py-32 mx-auto md:mx-20"
+      >
+        <li>Home</li>
+        <li>About</li>
+        <li>Content</li>
+        <li>Services</li>
+        <li>Portfolio</li>
+      </ul>
+      <button @click="open =! open">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </nav>
+  </body>
+</html>
