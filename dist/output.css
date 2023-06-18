@@ -422,6 +422,23 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: "vazir";
+
+  src: url(./fonts/Vazir/ttf/Vazir-Regular.ttf) format("turetype"),
+      url(./fonts/Vazir/woff/Vazir-Regular.woff) format("woff"),
+      url(./fonts/Vazir/woff2/Vazir-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "vazirBlack";
+
+  src: url(./fonts/Vazir/ttf/Vazir-Black.FD.ttf) format("turetype"),
+      url(./fonts/Vazir/eot/Vazir-Black.FD.eot) format("eot"),
+      url(./fonts/Vazir/woff/Vazir-Black.FD.woff) format("woff"),
+      url(./fonts/Vazir/woff2/Vazir-Black.FD.woff2) format("woff2");
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -526,12 +543,12 @@ video {
   position: fixed;
 }
 
-.top-5 {
-  top: 1.25rem;
-}
-
 .left-10 {
   left: 2.5rem;
+}
+
+.top-5 {
+  top: 1.25rem;
 }
 
 .top-8 {
@@ -613,6 +630,10 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.font-vazir {
+  font-family: vazir, san-serif;
 }
 
 .text-white {

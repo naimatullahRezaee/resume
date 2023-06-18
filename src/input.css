@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "vazir";
+    src: url(./fonts/Vazir/ttf/Vazir-Regular.ttf) format("turetype"),
+      url(./fonts/Vazir/woff/Vazir-Regular.woff) format("woff"),
+      url(./fonts/Vazir/woff2/Vazir-Regular.woff2) format("woff2");
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "vazirBlack";
+    src: url(./fonts/Vazir/ttf/Vazir-Black.FD.ttf) format("turetype"),
+      url(./fonts/Vazir/eot/Vazir-Black.FD.eot) format("eot"),
+      url(./fonts/Vazir/woff/Vazir-Black.FD.woff) format("woff"),
+      url(./fonts/Vazir/woff2/Vazir-Black.FD.woff2) format("woff2");
+  }
+}
