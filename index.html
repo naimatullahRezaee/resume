@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+      .bg {
+        background-image: url("images/hero.jpg");
+        background-size: cover;
+        background-position: top;
+      }
+    </style>
+  </head>
+  <body dir="rtl" class="font-vazir bg-[#353434]">
+    <!-- ======Start Navbar ======  -->
+    <div x-data="{open : false}">
+      <!-- mobile menu -->
+      <nav class="w-full py-5 fixed top-0 bg-[#333333]">
+        <div class="py-7 lg:py-2">
+          <ul
+            x-show="open"
+            x-transition
+            class="fixed top-5 w-full bg-[#333333] lg:hidden flex flex-col gap-12 lg:flex-row justify-center items-center py-14"
+          >
+            <li class="li"><a href="#">Home</a></li>
+            <li class="li"><a href="#">About</a></li>
+            <li class="li"><a href="#">Services</a></li>
+            <li class="li"><a href="#">Portfolio</a></li>
+            <li class="li"><a href="#">Contact</a></li>
+          </ul>
+          <!-- desktop menu -->
+          <ul
+            x-show="open = true"
+            x-transition
+            class="fixed top-0 w-full bg-[#333333] hidden lg:flex gap-12 lg:flex-row justify-start items-center py-5 px-8"
+          >
+            <li class="li"><a href="#">Contact</a></li>
+            <li class="li"><a href="#">Portfolio</a></li>
+            <li class="li"><a href="#">Services</a></li>
+            <li class="li"><a href="#">About</a></li>
+            <li class="li"><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- humburger btn -->
+      <button
+        class="lg:hidden transition-all duration-200"
+        @click="open =! open"
+        :class="open ? 'hidden' : 'block' "
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-9 h-9 fixed top-7 right-5 text-white z-50"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+
+      <button
+        class="lg:hidden"
+        @click="open = false"
+        :class="open ? 'block' : 'hidden' "
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-9 h-9 fixed top-7 right-5 text-white z-50"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- logo -->
+      <div class="z-50 fixed top-3 left-5 w-28">
+        <img src="images/woman1.jpeg" alt="" class="rounded-full w-10" />
+      </div>
+    </div>
+    <!-- ====== End Navbar ======  -->
+
+    <!-- ====== Start Background Image======  -->
+
+    <div class="bg w-full h-[1200px]"></div>
+    <!-- ====== End Background Image ======  -->
+  </body>
+</html>

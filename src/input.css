@@ -20,3 +20,9 @@
       url(./fonts/Vazir/woff2/Vazir-Black.FD.woff2) format("woff2");
   }
 }
+
+@layer components {
+  .li {
+    @apply p-3 text-lg text-white;
+  }
+}
