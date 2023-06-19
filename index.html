@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
     <script src="//unpkg.com/alpinejs" defer></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
       .bg {
-        background-image: url("images/hero.jpg");
+        background-image: url("images/bg.jpeg");
         background-size: cover;
         background-position: top;
+        clip-path: circle(78.1% at 64% 0);
       }
     </style>
   </head>
@@ -17,7 +22,7 @@
     <!-- ======Start Navbar ======  -->
     <div x-data="{open : false}">
       <!-- mobile menu -->
-      <nav class="w-full py-5 fixed top-0 bg-[#333333]">
+      <nav class="w-full py-5 fixed top-0 bg-[#333333] z-50">
         <div class="py-7 lg:py-2">
           <ul
             x-show="open"
@@ -96,7 +101,28 @@
 
     <!-- ====== Start Background Image======  -->
 
-    <div class="bg w-full h-[1200px]"></div>
+    <div
+      class="bg w-full h-screen bg-fixed flex flex-col justify-center items-center gap-5 text-center"
+    >
+      <h1
+        class="lg:text-[7rem] text-[2.5rem] text-white relative lg:top-6 font-bold italic"
+        data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500"
+      >
+        Hi, I am Rezaie
+      </h1>
+      <p class="text-white text-[1.5rem]">
+        : I am full stack developer <br />
+        Django , Html ,Css, Javascript, React, Next
+      </p>
+      <button class="btn">Contact Me</button>
+    </div>
     <!-- ====== End Background Image ======  -->
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

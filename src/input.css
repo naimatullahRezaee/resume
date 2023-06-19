@@ -22,6 +22,10 @@
 }
 
 @layer components {
+  .btn {
+    @apply bg-[#ff0066] py-3 px-10 rounded-md font-bold transition duration-1000 ease-in-out text-white hover:bg-white hover:text-black;
+  }
+
   .li {
     @apply p-3 text-lg text-white;
   }
